@@ -58,6 +58,30 @@ php spark serve --port 8081
 ```text
 http://localhost:8081/index.php/login
 ```
+## Database Setup
+
+1. Open **phpMyAdmin**.
+2. Click **Import**.
+3. Select the `database.sql` file from the project folder.
+4. Click **Go**.
+5. Database `employee_management` and the required tables will be created automatically.
+
+### Admin Login
+
+* **User ID:** `admin`
+* **Password:** `admin123`
+
+### Run Project
+
+```bash
+php spark serve --port 8081
+```
+
+Open:
+
+```text
+http://localhost:8081/index.php/login
+```
 
 ## Author
 
