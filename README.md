@@ -1,28 +1,102 @@
-# Employee Management System
+# 👨‍💼 Employee Management System
 
-A simple Employee Management System built using CodeIgniter 4, PHP, MySQL, Bootstrap, JavaScript and AJAX.
+A simple and responsive **Employee Management System** built using **CodeIgniter 4, PHP, MySQL, Bootstrap, JavaScript, and AJAX**.
 
-## Features
+The project provides an admin panel for managing employees and departments with authentication, CRUD operations, form validation, and AJAX-based employee creation.
 
-* Admin Login
-* Dashboard
-* Department CRUD
-* Employee CRUD
-* AJAX Employee Creation
-* Form Validation
-* Responsive Bootstrap UI
-* Authentication Protection
+---
 
-## Technologies Used
+## 🚀 Features
 
-* PHP
-* CodeIgniter 4
+* 🔐 Admin Login & Authentication
+* 📊 Admin Dashboard
+* 🏢 Department CRUD
+* 👨‍💼 Employee CRUD
+* ⚡ AJAX Employee Creation
+* ✅ Form Validation
+* 📱 Responsive Bootstrap UI
+* 🛡️ Authentication Protection
+* 🗄️ MySQL Database Integration
+
+---
+
+## 🛠️ Technologies Used
+
+<p align="left">
+  <img src="https://img.shields.io/badge/PHP-8.2+-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+  <img src="https://img.shields.io/badge/CodeIgniter-4-EF4223?style=for-the-badge&logo=codeigniter&logoColor=white" alt="CodeIgniter">
+  <img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+  <img src="https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/AJAX-Asynchronous-000000?style=for-the-badge" alt="AJAX">
+</p>
+
+### Development Tools
+
+<p align="left">
+  <img src="https://img.shields.io/badge/XAMPP-FA0F00?style=for-the-badge&logo=xampp&logoColor=white" alt="XAMPP">
+  <img src="https://img.shields.io/badge/Composer-885630?style=for-the-badge&logo=composer&logoColor=white" alt="Composer">
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+</p>
+
+---
+
+## 📋 Requirements
+
+Before running the project, make sure you have:
+
+* PHP 8.2 or higher
+* Composer
 * MySQL
-* Bootstrap 5
-* JavaScript
-* AJAX
+* XAMPP
+* CodeIgniter 4
 
-## Database Setup
+---
+
+## 📥 Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repository-url>
+cd employee-management-system-main
+```
+
+### 2. Install Dependencies
+
+The project requires CodeIgniter 4 dependencies.
+
+Run:
+
+```bash
+composer install
+```
+
+This will create the required `vendor` folder and install the CodeIgniter framework dependencies.
+
+> **Note:** If the `vendor` folder is missing, running `composer install` is required before starting the project.
+
+### 3. Configure Environment
+
+Configure the `.env` file with your database details.
+
+Example:
+
+```env
+database.default.hostname = localhost
+database.default.database = employee_management
+database.default.username = root
+database.default.password =
+database.default.DBDriver = MySQLi
+database.default.port = 3306
+```
+
+---
+
+## 🗄️ Database Setup
+
+### Database Name
 
 Create a database named:
 
@@ -30,59 +104,138 @@ Create a database named:
 employee_management
 ```
 
-Then create these 3 tables:
+### Using phpMyAdmin
 
-* admins
-* departments
-* employees
+1. Start **Apache** and **MySQL** from XAMPP.
+2. Open **phpMyAdmin**.
+3. Create/select the `employee_management` database.
+4. Click **Import**.
+5. Select the `database.sql` file from the project folder.
+6. Click **Go**.
+7. The required tables will be created automatically.
 
-Import the required SQL structure into MySQL/phpMyAdmin.
+### Required Tables
 
-## Admin Login
+* `admins`
+* `departments`
+* `employees`
 
-**User ID:** `admin`
-**Password:** `admin123`
+---
 
-## Run the Project
+## 🔑 Admin Login
 
-1. Start Apache and MySQL from XAMPP.
-2. Open the project folder.
-3. Run:
+Use the following credentials to access the admin panel:
 
-```bash
-php spark serve --port 8081
-```
+| Field    | Value      |
+| -------- | ---------- |
+| User ID  | `admin`    |
+| Password | `admin123` |
 
-4. Open:
+---
 
-```text
-http://localhost:8081/index.php/login
-```
-## Database Setup
+## ▶️ Run the Project
 
-1. Open **phpMyAdmin**.
-2. Click **Import**.
-3. Select the `database.sql` file from the project folder.
-4. Click **Go**.
-5. Database `employee_management` and the required tables will be created automatically.
-
-### Admin Login
-
-* **User ID:** `admin`
-* **Password:** `admin123`
-
-### Run Project
+Start the CodeIgniter development server:
 
 ```bash
 php spark serve --port 8081
 ```
 
-Open:
+Then open:
 
 ```text
 http://localhost:8081/index.php/login
 ```
 
-## Author
+---
 
-Raj Mukherjee
+## ⚠️ Common Dependency Error
+
+If you see an error similar to:
+
+```text
+Failed opening required:
+vendor/codeigniter4/framework/system/Boot.php
+```
+
+It means the required Composer dependencies are missing.
+
+Run:
+
+```bash
+composer install
+```
+
+Then start the project again:
+
+```bash
+php spark serve --port 8081
+```
+
+After successful installation, the project should run normally.
+
+---
+
+## ✅ Result
+
+The **Employee Management System runs successfully** after:
+
+1. Installing Composer dependencies
+2. Configuring the `.env` database settings
+3. Importing `database.sql`
+4. Starting Apache and MySQL
+5. Running the CodeIgniter development server
+
+Application URL:
+
+```text
+http://localhost:8081/index.php/login
+```
+
+---
+
+## 📂 Project Structure
+
+```text
+employee-management-system-main/
+│
+├── app/
+│   ├── Config/
+│   ├── Controllers/
+│   ├── Models/
+│   ├── Views/
+│   └── Database/
+│
+├── public/
+├── writable/
+├── tests/
+├── database.sql
+├── composer.json
+├── env
+├── spark
+└── README.md
+```
+
+> The `vendor/` folder is generated by Composer and should not normally be committed to GitHub.
+
+---
+
+## 📸 Application
+
+The system includes:
+
+* Admin Login
+* Dashboard
+* Department Management
+* Employee Management
+* AJAX Employee Creation
+* Form Validation
+* Responsive UI
+
+---
+
+## 👨‍💻 Author
+
+**Raj Mukherjee**
+
+Built with ❤️ using **CodeIgniter 4, PHP, MySQL, Bootstrap, JavaScript & AJAX**.
